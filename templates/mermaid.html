@@ -1,0 +1,5 @@
+<script type="module">
+  import mermaid from "$cdn";
+  const dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  mermaid.initialize({ startOnLoad: true, theme: dark ? "dark" : "neutral", fontFamily: "inherit", securityLevel: "strict" });
+</script>

@@ -1,0 +1,18 @@
+<main class="wrap">
+  <article class="post">
+    <header class="post-header">
+      <p class="back"><a href="$base">&larr; All articles</a></p>
+      <h1>$title</h1>
+      <p class="meta"><time datetime="$iso_date">$display_date</time> <span aria-hidden="true">&middot;</span> $minutes min read <span aria-hidden="true">&middot;</span> Akib Jafor</p>
+      $tags
+      <p class="source">Source: <a href="$repo_url" rel="noopener">github.com/AkibUllah/$repo</a></p>
+    </header>
+    <div class="prose">
+$content
+    </div>
+  </article>
+  <nav class="post-nav" aria-label="More articles">
+    $newer
+    $older
+  </nav>
+</main>

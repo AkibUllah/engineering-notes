@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>$title</title>
+<meta name="description" content="$description">
+<meta name="author" content="$author">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="$canonical">
+<meta property="og:type" content="$og_type">
+<meta property="og:title" content="$title">
+<meta property="og:description" content="$description">
+<meta property="og:url" content="$canonical">
+<link rel="alternate" type="application/rss+xml" title="$site_title" href="${base}feed.xml">
+<link rel="icon" href="${base}favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="${base}style.css">
+<link rel="stylesheet" href="${base}pygments.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="site-title" href="$base">$site_title</a>
+    <nav aria-label="Site">
+      <a href="${base}#about">About</a>
+      <a href="https://github.com/AkibUllah" rel="noopener">GitHub</a>
+      <a href="${base}feed.xml">RSS</a>
+    </nav>
+  </div>
+</header>
+$body
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Written by <a href="https://akibullah.github.io/portfolio" rel="noopener">$author</a> in Dhaka. Article text &copy; 2026 $author, licensed <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener">CC BY 4.0</a>; site code MIT.</p>
+    <p><a href="https://github.com/AkibUllah" rel="noopener">GitHub</a> &middot; <a href="https://akibullah.github.io/portfolio" rel="noopener">Portfolio</a> &middot; <a href="${base}feed.xml">RSS</a> &middot; <a href="https://github.com/AkibUllah/engineering-notes" rel="noopener">Source</a></p>
+  </div>
+</footer>
+$mermaid
+</body>
+</html>
