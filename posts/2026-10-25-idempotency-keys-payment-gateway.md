@@ -1,6 +1,6 @@
 ---
 title: Idempotency keys done properly in a payment API
-date: 2026-10-21
+date: 2026-10-25
 summary: Replaying stored responses, rejecting a reused key with a different body, committing the receipt with the charge, plus the state machine and integer money that make retries safe in fastapi-payment-gateway.
 tags: payments, fastapi, idempotency, fintech
 repo: fastapi-payment-gateway

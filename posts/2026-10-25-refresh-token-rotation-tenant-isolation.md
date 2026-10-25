@@ -1,6 +1,6 @@
 ---
 title: Refresh-token rotation with reuse detection, and tenancy in one dependency
-date: 2026-10-22
+date: 2026-10-25
 summary: How multi-tenant-saas-auth rotates refresh tokens in families so a replayed token logs out the thief and nobody else, and how one FastAPI dependency answers "which tenant, with what permissions" for every route.
 tags: authentication, security, fastapi, multi-tenancy
 repo: multi-tenant-saas-auth

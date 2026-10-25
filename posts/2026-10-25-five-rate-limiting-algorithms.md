@@ -1,6 +1,6 @@
 ---
 title: Five rate-limiting algorithms, one Lua script each
-date: 2026-10-23
+date: 2026-10-25
 summary: Token bucket, fixed window, sliding log, sliding window counter and GCRA side by side in rate-limiter-service, why every Redis step is a single Lua script, and what the benchmark table actually tells you.
 tags: redis, rate-limiting, algorithms, python
 repo: rate-limiter-service
