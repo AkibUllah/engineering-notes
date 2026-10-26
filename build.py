@@ -35,7 +35,7 @@ STATIC_DIR = ROOT / "static"
 OUT_DIR = ROOT / "_site"
 
 SITE_TITLE = "Engineering Notes"
-SITE_AUTHOR = "Akib Jafor"
+SITE_AUTHOR = "Akib Ullah Jafor"
 SITE_DESCRIPTION = (
     "Deep dives into the design decisions, trade-offs and tests behind my open-source "
     "backend projects: payments, queues, rate limiting, auth, retrieval and agents."
