@@ -144,6 +144,8 @@ The sandbox bKash rule is 185 basis points, so ৳1,500.00 costs exactly 2,775 p
 
 One gap is worth stating plainly. The lookup and the save happen in the same transaction, but nothing reserves the key *while* a request is in flight. If two requests with the same new key arrive at the same moment, both miss the lookup and both call the provider. The unique constraint on `(merchant_id, key)` means only one of them can commit, and the other fails. So the database ends up with one payment, but the sandbox provider was called twice. A real provider would need its own idempotency reference, or the gateway would need to insert a "processing" record before calling out. For retries after a lost response, which are what actually happens on mobile networks, the current design is correct. Simultaneous duplicates from a double-submit need that extra step.
 
+> **Update, 26 October 2026:** that extra step is now in place ([PR #13](https://github.com/AkibUllah/fastapi-payment-gateway/pull/13), released in [v0.2.0](https://github.com/AkibUllah/fastapi-payment-gateway/releases/tag/v0.2.0)). A request first inserts an `in_progress` reservation for its key and commits it, so the unique constraint picks one winner before any provider call. A duplicate that arrives meanwhile gets `409 idempotency_key_in_progress` with `Retry-After`. A failed request releases the key, and a crashed one frees it when a short lease expires. A new CI job races eight concurrent requests for one key on PostgreSQL and checks that exactly one reserves it.
+
 ## What I'd do next
 
 From the repository's roadmap:
